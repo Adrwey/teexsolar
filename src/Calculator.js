@@ -76,7 +76,7 @@ function Calculator() {
       >
         <form onSubmit={handleSubmit}>
           <h1 style={{ margin: "20px", color: "#015F6B", fontSize: "40px" }}>
-            CALCULADORA SOLAR
+            CALCULADORA SOLAaaaR
           </h1>
 
           <TextField
