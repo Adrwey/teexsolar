@@ -15,6 +15,8 @@ import Calculator from "./Calculator";
 import Home from "./Home";
 import Sobre from "./Sobre";
 import Contato from "./Contato";
+import logo from "./assets/logo.png";
+import { Height } from "@material-ui/icons";
 
 const useStyles = makeStyles({
   root: {
@@ -33,7 +35,7 @@ function App() {
         main: "#475F94",
       },
       secondary: {
-        main: "#FDDC5C",
+        main: "#FCFC81",
       },
     },
   });
@@ -47,49 +49,66 @@ function App() {
           <div className={classes.root}>
             <AppBar position="static">
               <Toolbar>
-                <IconButton
-                  edge="start"
-                  className={classes.menuButton}
-                  color="inherit"
-                  aria-label="menu"
-                >
-                  <MenuIcon />
-                </IconButton>
-                <Typography variant="h6" className={classes.title}>
-                  Teex Solar
-                </Typography>
-                <Button color="inherit">
+                <div className={classes.title}>
                   <Link
-                    style={{ color: "#FDDC5C", textDecoration: "none" }}
+                    style={{ color: "#FCFC81", textDecoration: "none" }}
                     to="/"
                   >
-                    Início
+                    <img
+                      style={{
+                        maxHeight: "80px",
+                        margin: "20px",
+                        marginLeft: "60px",
+                      }}
+                      src={logo}
+                      alt=""
+                    />
                   </Link>
-                </Button>
-                <Button color="inherit">
-                  <Link
-                    style={{ color: "#FDDC5C", textDecoration: "none" }}
-                    to="calculadora"
-                  >
-                    Calculadora Solar
-                  </Link>
-                </Button>
-                <Button color="inherit">
-                  <Link
-                    style={{ color: "#FDDC5C", textDecoration: "none" }}
-                    to="sobre"
-                  >
-                    Sobre
-                  </Link>
-                </Button>
-                <Button color="inherit">
-                  <Link
-                    style={{ color: "#FDDC5C", textDecoration: "none" }}
-                    to="contato"
-                  >
-                    Contato
-                  </Link>
-                </Button>
+                </div>
+
+                <Link
+                  style={{
+                    color: "#FCFC81",
+                    textDecoration: "none",
+                    marginRight: "30px",
+                  }}
+                  to="/"
+                >
+                  INÍCIO
+                </Link>
+
+                <Link
+                  style={{
+                    color: "#FCFC81",
+                    textDecoration: "none",
+                    marginRight: "30px",
+                  }}
+                  to="calculadora"
+                >
+                  CALCULADORA SOLAR
+                </Link>
+
+                {/* <Link
+                  style={{
+                    color: "#FCFC81",
+                    textDecoration: "none",
+                    marginRight: "30px",
+                  }}
+                  to="dicas"
+                >
+                  DICAS
+                </Link> */}
+
+                <Link
+                  style={{
+                    color: "#FCFC81",
+                    textDecoration: "none",
+                    marginRight: "100px",
+                  }}
+                  to="contato"
+                >
+                  CONTATO
+                </Link>
               </Toolbar>
             </AppBar>
 
@@ -98,7 +117,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/calculadora" element={<Calculator />} />
-              <Route path="/sobre" element={<Sobre />} />
+              <Route path="/dicas" element={<Sobre />} />
               <Route path="/contato" element={<Contato />} />
             </Routes>
           </div>

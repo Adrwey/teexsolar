@@ -1,0 +1,37 @@
+.page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  gap: 2rem;
+}
+.page::before {
+  display: block;
+  content: "";
+  background: url("./assets/img-login.jpg") no-repeat center bottom;
+  background-size: cover;
+}
+
+.form {
+  max-width: 30rem;
+  padding: 2rem;
+}
+
+.response {
+  padding: 50px;
+}
+
+.ppp {
+  padding: 10px;
+}
+
+@media (max-width: 40rem) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+  .page::before {
+    display: none;
+  }
+  .form {
+    max-width: 100%;
+  }
+}
